@@ -1,0 +1,57 @@
+/* Project Map Styles */
+.custom-project-marker {
+    background: transparent;
+    border: none;
+}
+
+.project-popup .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-popup .leaflet-popup-content {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.project-popup .leaflet-popup-tip {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Map container loading state */
+#projectLocationMap {
+    position: relative;
+}
+
+#projectLocationMap::before {
+    content: 'Loading map...';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #666;
+    z-index: 999;
+}
+
+/* Leaflet control customization */
+.leaflet-control-zoom a {
+    border-radius: 4px;
+}
+
+.leaflet-control-zoom {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.leaflet-bar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive map */
+@media (max-width: 768px) {
+    #projectLocationMap {
+        height: calc(70vh - 100px) !important;
+    }
+}
